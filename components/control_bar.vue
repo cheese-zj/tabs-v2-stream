@@ -13,7 +13,6 @@
       <t-button id="degree_button" variant="outline" theme="default" :style="buttonStyle">{{ selectedDegree }}</t-button>
       </t-dropdown>
     </div> -->
-    <div class="interaction-block-3">
       <t-dropdown
         minColumnWidth="190px"
         :options="majorOptions"
@@ -23,8 +22,6 @@
       >
       <button id="major_button" variant="outline" theme="default" :style="buttonStyle">{{ selectedMajor1 }}</button>
       </t-dropdown>
-    </div>
-    <div class="interaction-block-4">
       <t-dropdown
         minColumnWidth="190px"
         :options="majorOptions"
@@ -34,7 +31,6 @@
       >
       <button id="major_button" variant="outline" theme="default" :style="buttonStyle">{{ selectedMajor2 }}</button>
       </t-dropdown>
-    </div>
     <div class="viewMajor_button" :class="{ 'displayMP': viewMajor }" @click="toggleViewMajor">
       <span class="material-symbols-outlined"> list </span>
     </div>
@@ -130,47 +126,6 @@ export default defineComponent({
     position: relative;
 }
 
-
-.interaction-block-2 {
-    max-width: 100px;
-    min-width: 20px;
-    padding: 15px;
-    border-radius: 20px;
-    margin: 5px;
-    cursor: pointer;
-    flex-direction: column; /* Stack elements vertically */
-    border: 2px solid #989898;
-    box-shadow: 0px 4px 4px 0.0px rgba(133, 133, 133, 0.2);
-    transition: 0.2s;
-}
-
-.interaction-block-3 {
-    max-width: 100px;
-    min-width: 20px;
-    padding: 8px;
-    border-radius: 20px;
-    margin: 5px;
-    cursor: pointer;
-    flex-direction: column;
-    border: 2px solid #989898;
-    box-shadow: 0px 4px 4px 0.0px rgba(133, 133, 133, 0.2);
-    transition: 0.2s;
-    overflow: hidden;
-}
-
-.interaction-block-4 {
-    max-width: 100px;
-    min-width: 20px;
-    padding: 8px;
-    border-radius: 20px;
-    margin: 5px;
-    cursor: pointer;
-    flex-direction: column; 
-    border: 2px solid #989898;
-    box-shadow: 0px 4px 4px 0.0px rgba(133, 133, 133, 0.2);
-    transition: 0.2s;
-    overflow: hidden;
-}
 .viewMajor_button .material-symbols-outlined {
     min-width: 40px;
     max-height: 10px;
@@ -179,6 +134,7 @@ export default defineComponent({
     padding-top: 5px;
     border-radius: 50px;
     margin: 10px;
+    margin-left: 5px;
     cursor: pointer;
     flex-direction: column; /* Stack elements vertically */
     border: 2px solid #989898;
@@ -188,27 +144,12 @@ export default defineComponent({
     user-select: none;
 }
 
+#major_button:hover {
+    background-color: #f8f8f858;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
 
-.interaction-block-1:hover {
-    background-color: #f8f8f858;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: 0.2s;
-}
-.interaction-block-2:hover {
-    background-color: #f8f8f858;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: 0.2s;
-}
-.interaction-block-3:hover {
-    background-color: #f8f8f858;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: 0.2s;
-}
-.interaction-block-4:hover {
-    background-color: #f8f8f858;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: 0.2s;
-}
 .viewMajor_button .material-symbols-outlined:hover{
     background-color: rgba(255, 94, 0, 0.9);
     box-shadow: 0px 0px 8px rgba(255, 102, 0, 0.885);
@@ -251,18 +192,34 @@ export default defineComponent({
 }
 
 #major_button {
-    min-width: 100%;
-    max-width: 100%;
+    min-height: 35px;
     font-family: "Roboto Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* font-optical-sizing: auto; */
     font-weight: 400;
     color: #d4d4d4;
     font-style: italic;
     font-size: 9.0px;
-    border: none;
     margin-bottom: 2px;
-    background-color: transparent;
+
     overflow: hidden;
+    max-width: 85px;
+    min-width: 85px;
+    padding-top: 3px;
+    border-radius: 20px;
+    margin: 5px;
+    flex-direction: column;
+    border: 2px solid #989898;
+    box-shadow: 0px 4px 4px 0.0px rgba(133, 133, 133, 0.2);
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+#major_button:active {
+  transform: scale(0.96);
+  box-shadow: 0px 0px 8px 0.0px #ffffffaf;
+  transition: 0.1s;
+  /* background-color: rgba(255, 255, 255, 0.817); */
+  border: 2px solid #cdcdcd;
 }
 
 </style>
