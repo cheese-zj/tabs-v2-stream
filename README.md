@@ -1,6 +1,6 @@
 # Building the new CUSP/Unit of Study Selection Helper - USYD TABS v2 merged! (Name not finalised)
 ---
-README V1.03 Apr 12th 2024
+README Apr 12th 2024
 USYD tabs v2 dev - check: https://github.com/cheese-zj/tabs-v2-stream
 V2 running at: https://tabs-usyd.vercel.app/
 ### Why we need need a new CUSP anyway?
