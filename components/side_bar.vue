@@ -9,7 +9,7 @@
                 <div class="m-panel-title">
                     {{ store.degree }} Bachelor of Advanced Computing:
                 </div>
-                <div class="m-zone" :class="{exp: isDegreeExpanded}">
+                <div class="m-zone-b" :class="{exp: isDegreeExpanded}">
                     <div class="m-tab" @click="toggleDg">
                         View Degree Core Units <br> >>
                     </div>
@@ -329,72 +329,30 @@ export default defineComponent({
     box-shadow: 0px 6px 6px 0.0px rgba(133, 133, 133, 0.2);
 }
 
-.m-zone {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    gap: 0px; 
-    width: 40%;
-    max-height: 4.6vw;
-    background-color: #b1b1b156;
-    border-radius: 18px;
-    border: 2px solid #e0e0e0;
-    box-shadow: 0px 6px 6px 0.0px rgba(133, 133, 133, 0.2);
-    background-color: none;
-    margin-top: 4.5%;
-    padding-top: 0%;
-    padding-bottom: 1%;
-    margin-left: 4.5%;
-    overflow: hidden;
-    transition: 0.2s;
-}
-
-.m-zone.exp {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    gap: 0px; 
-    width: 90%;
-    height: fit-content;
-    max-height: fit-content;
-    min-height: fit-content;
-    background-color: #b1b1b156;
-    border-radius: 18px;
-    border: 2px solid #ffffff;
-    box-shadow: 0px 6px 6px 0.0px rgba(133, 133, 133, 0.2);
-    background-color: none;
-    margin-top: 4.5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-left: 4.5%;
-    overflow-y: auto;
-    transition: 0.2s;
-}
-
 .m-zone-b {
     display:flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: left; 
+    background-color: transparent;
     gap: 0px; 
     width: 60%;
-    max-height: 5.5vw;
-    background-color: #b1b1b156;
+    max-height: 75px;
     border-radius: 18px;
-    border: 2px solid #e0e0e0;
-    box-shadow: 0px 6px 6px 0.0px rgba(133, 133, 133, 0.2);
-    background-color: none;
-    margin-top: 4.5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-left: 4.5%;
+    border: 2px solid #e0e0e000;
+    /* box-shadow: 0px 6px 6px 0.0px rgba(133, 133, 133, 0.2); */
+    margin-top: 3%;
+    padding-top: 0%;
+    padding-bottom: 0px;
+    margin-left: 5%;
     overflow: hidden;
+    opacity: 1;
     transition: 0.2s;
 }
 
 .m-zone-b.exp {
     display:flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: space-around; 
     gap: 0px; 
     width: 90%;
     height: fit-content;
@@ -456,10 +414,12 @@ export default defineComponent({
     padding-right: 2px;
     margin-bottom: 6px;
     outline: none;
+    min-width: 90%;
     width: 90%;
     cursor: grab;
     border: 2px solid #ffffff8f;
     transition: 0.14s;
+    user-select: none;
     
 }
 
@@ -687,26 +647,27 @@ export default defineComponent({
     min-height: 3vw;
     height:3vw;
     max-height: 3vw;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0%;
     margin-bottom: 3%;
     margin-top: 4.5%;
     transition: 0.25s;
     overflow: hidden;
     padding: 4%;
-    box-shadow: 0px 0px 18px 0.0px rgba(255, 255, 255, 0.2);
+    border: solid 2px #ffffffb7;
+    /* box-shadow: 0px 0px 18px 0.0px rgba(255, 255, 255, 0.2); */
 }
 
 .m-tab:hover {
     transition: 0.2s;
     transform: scale(1.03);
-    box-shadow: 0px 0px 18px 0.0px rgb(213, 213, 213);
+    border: solid 2px #525252b7;
+    /* box-shadow: 0px 0px 18px 0.0px rgb(213, 213, 213); */
 }
 
 .m-tab:focus, .m-tab:active {
     transition: 0.2s;
     transform: scale(0.97);
-    box-shadow: 0px 0px 18px 0.0px rgba(255, 161, 72, 0.663);
+    /* box-shadow: 0px 0px 18px 0.0px rgba(255, 248, 241, 0.254); */
 }
 
 .pn-content-tab {
