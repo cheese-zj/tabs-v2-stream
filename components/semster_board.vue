@@ -302,7 +302,7 @@ export default defineComponent({
     padding-right: 2px;
     outline: none;
     min-width: 10%;
-    max-width: 24%;
+    max-width: 23.33%;
     cursor: grab;
     border: 2px solid #ffffff8f;
     transition: 0.14s;
