@@ -1,92 +1,24 @@
 # Building the new CUSP/Unit of Study Selection Helper - USYD TABS v2 merged! (Name not finalised)
 ---
-README V1.03 Apr 12th 2024
-USYD tabs v2 dev - check: https://github.com/cheese-zj/tabs-v2-stream
-V2 running at: https://tabs-usyd.vercel.app/
-### Why we even need a new CUSP anyway?
-The current course selection system, CUSP, is complex and unintuitive, often requiring information from various sources for course selection. This manual process is especially challenging for freshmen, gap year students, students attending exchange programs or combined degrees, or those who have failed courses.
-### The Solution:
-We're introducing a new course selection web app for the University of Sydney, designed to be efficient, dynamic, and user-friendly. Initially, it supporting the Bachelor of Advanced Computing Degree units, using Vue.js 3.0 with Nuxt and JavaScript/TypeScript for processing front-end interaction.
-### Future about this project, what are we looking for:
-Roadmap includes expanding to include comprehensive course information and integrating a complete database. Also login for records, bookmark, sharing your course plan …!
-Continuous development and maintenance for this course planning tool is guaranteed as long as uni coursework is not trying to killing me.
+README 30th Jul 2024 - hey! new sem.. how nice..?
+use the planner: https://tabs-usyd.vercel.app/
+### Why we even need a new CUSP/Planner anyway?
+In short, the current sites are pretty bad (at least in terms of own planning imo). This system is more meant to be a planner skeleton with some simple prerequisite / co-req / prohibs detections. The coverage of unit is not 100% but currently pretty usuable from my perspective, if you have any suggestion on this feel free to contact me.
+(somehow there's a 3888 project on course planning.. very cool stuff, I might want official data support from the uni if possible, currently they are all scrapped from uni websites.. and all those creepy descriptions and prereqs were driving me crazy.)
 
 ---
-# Project access and setups:
+# Access and setups:
+this repo (usually the latest): https://tabs-usyd.vercel.app/
+coding fest edition: https://definitely-not-cusp.vercel.app/
 
-## This Repo is currently running at https://definitely-not-cusp.vercel.app/ 
-## Check https://tabs-usyd.vercel.app/ for v2 updates
-
-## Setup locally:
-### Setup
-
-Make sure to install the dependencies:
-
-```shell
-# yarn
-yarn
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-### Development Server
-
-Start the development server on [http://localhost:3000](http://localhost:3000/)
-
-```shell
-npm run dev
-```
-
-### Production
-
-Build the application for production:
-
-```shell
-npm run build
-```
-
-Locally preview production build:
-
-```shell
-npm run preview
-```
-
----
-# Functions v2 (early):
-# Functions v2 (early):
-Apr 10th Wed Version:
 ### Overlook at the page:
-![screenshot](readme.pic/a1.png)
+![screenshot](readme.pic/overview.jpeg)
 ### Course Selection Area:
-- Year and Semester Layout: The system organises courses into "Year 1," "Year 2," etc., further subdivided into "Semester 1" and "Semester 2," visually arranging students' course plans for each term.
-- Course Unit Area: Each semester features multiple boxes where different course units are placed. These units are colour-coded by category, with units sharing the same course prefix displayed in the same colour. Users can add courses by dragging and dropping units; duplicate courses cannot be added, and any course can be removed by clicking its top right corner. Clicking on a course unit reveals detailed information on the right side.
-![screenshot](readme.pic/a1.png)
-### Course Selection Area:
-- Year and Semester Layout: The system organises courses into "Year 1," "Year 2," etc., further subdivided into "Semester 1" and "Semester 2," visually arranging students' course plans for each term.
-- Course Unit Area: Each semester features multiple boxes where different course units are placed. These units are colour-coded by category, with units sharing the same course prefix displayed in the same colour. Users can add courses by dragging and dropping units; duplicate courses cannot be added, and any course can be removed by clicking its top right corner. Clicking on a course unit reveals detailed information on the right side.
-### Top Navigation Area:
-- Degree Selection: Users can select their desired degree from a dropdown menu, such as "Bachelor of Advanced Computing."
-- Major Selection: Provides two slots for users to choose their majors, for example, "Computational Data Science" and "Software Development."
-- Guidance Panel: After selecting the degree and major, clicking on the guidance panel to the right reveals a dark sidebar. This displays the chosen degree and the core course units pertinent to the selected major, aiding students in understanding the offerings across different degrees and majors.
-### Sidebar:
-- This includes a search box, enabling users to swiftly locate specific course units by keyword, thus increasing efficiency.
-- Below the search box, the sidebar serves as a reservoir of courses from which users can drag and drop to refine their selection.
-- Also the space for displaying detailed course information, everything here is interactive.
+- Year and Semester Layout: The system organises courses into "Year 1," "Year 2," etc., further subdivided into semesters, the setting for each year is where you can modify which semester to display - this is for students taking intensive sems / gap year or semesters. The prerequisite and etc. control is still up for these extra periods, but they are not guaranteed to be accruate.
+- The buttons on the top are for amount of yr control - pretty obvious - the bin button is for cleaning the whole plan, sorry for not having an extra warning YET but I hope not a lot of ppl are misclicking it.
+- Drag any unit you searched up / filtered by degree or major cores into the table. The plan will automatically stored in your browser localstorage so don't worry about it too much. Sadly I'm not supporting this planner with a proper backend currently so if you wish to view the same plan on your laptop and mobile devices it might be a bit tedious to make 2 plans, I might work on an simple account support (or some clipboard magic for you to easily get your plan into another device easily)
+- The prerequisites detection is modified using the prereqs given by the uni websites, some of those units have these descriptions totally not processable, so some units having such "complete 12cp of 2000 level of XXXX units" might cause some false warning, you may ignore the warning if you want by clicking on the unit block, there's a little toggle in the planel of that specific unit.
 
-#### Dragging unit items around!
-![screenshot](readme.pic/a2.png)
-![screenshot](readme.pic/a2.png)
-#### Selected unit description (not fully finished):
-![screenshot](readme.pic/a3.png)
-#### Degree and major core unit helper (now only supports Bachelor of Advanced Computing)
-![screenshot](readme.pic/a6.png)
-![screenshot](readme.pic/a3.png)
-#### Degree and major core unit helper (now only supports Bachelor of Advanced Computing)
-![screenshot](readme.pic/a6.png)
-#### Search your unit up:
-![screenshot](readme.pic/a4.png)
-![screenshot](readme.pic/a4.png)
+### Sidebar:
+- A search box, swiftly locate specific course units by keyword...! This can be the unit code or the unit name.
+- A browse button under the searching functionality - plenty of majors / degrees scrapped from uni sites in a very unplesent way, good luck finding yours.
