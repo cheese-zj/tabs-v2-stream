@@ -7262,10 +7262,10 @@
         "Data_Science",
         "Computational_Data_Science"
       ],
-      "P": "(INFO1110 or INFO1910 or ENGG1810 or DATA1002) AND distinction-level results in at least one 2000-level COMP or MATH or SOFT unit",
+      "P": "(INFO1110 or INFO1910 or ENGG1810 or DATA1002) AND distinction-level results in at least one 2000-level COMP OR MATH OR SOFT unit",
       "C": "",
-      "N": "COMP3308 COMP3308 and COMP3608 share the same lectures, but have different tutorials AND assessment (the same type but more challenging).",
-      "A": "Data structures AND algorithms as covered in COMP2123 or COMP2823. P (INFO1110 or INFO1910 or ENGG1810 or DATA1002) AND distinction-level results in at least one 2000-level COMP or MATH or SOFT unit N COMP3308 COMP3308 and COMP3608 share the same lectures, but have different tutorials AND assessment (the same type but more challenging).",
+      "N": "COMP3308",
+      "A": "Data structures AND algorithms as covered in COMP2123 OR COMP2823.",
       
       "credit": 6
     },
