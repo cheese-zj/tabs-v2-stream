@@ -1,25 +1,22 @@
 {
+  "name": "tabs-v2-stream",
   "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "^1.0.3",
-    "autoprefixer": "^10.4.19",
-    "nuxt": "^3.8.2",
-    "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4",
-    "vue": "^3.3.8",
-    "vue-router": "^4.2.5"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "tdesign-vue-next": "^1.9.3",
-    "vue-draggable-plus": "^0.4.0",
-    "vuedraggable": "^2.24.3"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.3"
   }
 }

@@ -2,6 +2,21 @@
 ---
 README 30th Jul 2024 - hey! new sem.. how nice..?
 use the planner: https://tabs-usyd.vercel.app/
+
+## Local Development (Vite + React + TailwindCSS)
+
+```bash
+npm install
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
 ### Why we even need a new CUSP/Planner anyway?
 In short, the current sites are pretty bad (at least in terms of own planning imo). This system is more meant to be a planner skeleton with some simple prerequisite / co-req / prohibs detections. The coverage of unit is not 100% but currently pretty usuable from my perspective, if you have any suggestion on this feel free to contact me.
 (somehow there's a 3888 project on course planning.. very cool stuff, I might want official data support from the uni if possible, currently they are all scrapped from uni websites.. and all those creepy descriptions and prereqs were driving me crazy.)
